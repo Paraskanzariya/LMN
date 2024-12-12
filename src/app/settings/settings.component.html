@@ -1,0 +1,18 @@
+<h2>Settings</h2>
+<div class="toggle-container">
+    <table>
+        <mat-slide-toggle class="toggle-button" [checked]="toggleStatus[0]" (change)="toggleChange($event, 0)">Emails
+            when
+            someone applies for a loan</mat-slide-toggle>
+        <mat-slide-toggle class="toggle-button" [checked]="toggleStatus[1]" (change)="toggleChange($event, 1)">Email me
+            whenever I encounter unusual activity</mat-slide-toggle>
+        <mat-slide-toggle class="toggle-button" [checked]="toggleStatus[2]" (change)="toggleChange($event, 2)">Notify me
+            by
+            email about sales and latest news</mat-slide-toggle>
+        <mat-slide-toggle class="toggle-button" [checked]="toggleStatus[3]" (change)="toggleChange($event, 3)">Email me
+            about new features and updates</mat-slide-toggle>
+        <mat-slide-toggle class="toggle-button" [checked]="toggleStatus[4]" (change)="toggleChange($event, 4)">Email me
+            about tips on using my account</mat-slide-toggle>
+            <!-- <mat-slide-toggle class="toggle-button" [checked]="darkMode" (change)="toggleDarkMode()">Dark Mode</mat-slide-toggle> -->
+    </table>
+</div>

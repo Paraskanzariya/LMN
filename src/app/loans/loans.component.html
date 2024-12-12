@@ -1,0 +1,55 @@
+<h2>Loans</h2>
+<div class="table-container">
+    <mat-form-field class="search-field">
+        <mat-icon class="search-icon">search</mat-icon>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Search">
+    </mat-form-field>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <!-- Loan ID Column -->
+        <ng-container matColumnDef="loanId">
+            <th mat-header-cell *matHeaderCellDef> Loan ID </th>
+            <td mat-cell *matCellDef="let loan"> {{loan.loanId}} </td>
+        </ng-container>
+
+        <!-- Customer Name Column -->
+        <ng-container matColumnDef="customerName">
+            <th mat-header-cell *matHeaderCellDef> Customer Name </th>
+            <td mat-cell *matCellDef="let loan"> {{loan.customerName}} </td>
+        </ng-container>
+
+        <!-- Loan Type Column -->
+        <ng-container matColumnDef="loanType">
+            <th mat-header-cell *matHeaderCellDef> Loan Type </th>
+            <td mat-cell *matCellDef="let loan"> {{loan.loanType}} </td>
+        </ng-container>
+
+        <!-- Last Payment Column -->
+        <ng-container matColumnDef="lastPayment">
+            <th mat-header-cell *matHeaderCellDef> Last Payment </th>
+            <td mat-cell *matCellDef="let loan"> {{loan.lastPayment}} </td>
+        </ng-container>
+
+        <!-- Payment Due Column -->
+        <ng-container matColumnDef="paymentDue">
+            <th mat-header-cell *matHeaderCellDef> Payment Due </th>
+            <td mat-cell *matCellDef="let loan"> {{loan.paymentDue}} </td>
+        </ng-container>
+
+        <!-- Loan Status Column -->
+        <ng-container matColumnDef="loanStatus">
+            <th mat-header-cell *matHeaderCellDef> Loan Status </th>
+            <td mat-cell *matCellDef="let loan" [ngClass]="{
+                'active': loan.loanStatus === 'Active',
+                'risk': loan.loanStatus === 'Risk',
+                'inactive': loan.loanStatus === 'Inactive'
+            }"> {{loan.loanStatus}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table><br>
+
+    <!-- Paginator for pagination -->
+    <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" showFirstLastButtons></mat-paginator>
+</div>

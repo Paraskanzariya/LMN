@@ -1,0 +1,36 @@
+.toggle-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  h2{
+    padding-top: 10%;
+    margin-left: 20%;
+  }
+  
+  .toggle-button {
+    width: 50%;
+    margin-left: 20%;
+    margin-top: 1%;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .toggle-button.mat-checked {
+    background-color: #2196f3; /* Change background color when toggled */
+    color: white;
+  }
+  
+  .toggle-button:focus {
+    outline: none; /* Remove default focus outline */
+  }
+  
+  /* Animation for hover effect */
+  .toggle-button:hover {
+    background-color: #ccc;
+  }
+  

@@ -1,0 +1,82 @@
+/* Report component styles */
+
+.report-container {
+  margin-top: 6%;
+  margin-left: 20%;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.download-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  margin-right: 10px;
+}
+
+.download-button:hover {
+  color: rgb(49, 97, 253);
+}
+
+.filters mat-form-field {
+  width: 200px;
+  margin-right: 15px;
+}
+
+.filters button {
+  margin-left: 10px;
+  left: 37%;
+  top: -10px
+}
+
+.grButton:hover {
+  background-color: rgb(49, 97, 253);
+}
+
+.report-data {
+  margin-top: 20px;
+  margin-right: 10%;
+}
+
+.mat-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.mat-header-row,
+.mat-row {
+  border-bottom: 1px solid #ccc;
+}
+
+.mat-cell,
+.mat-header-cell {
+  padding: 10px;
+  text-align: left;
+}
+
+.mat-header-cell {
+  font-weight: bold;
+}
+
+.mat-paginator {
+  justify-content: center;
+  margin-top: 20px;
+}
+
+
+.active {
+  color: rgb(27, 142, 187);
+}
+
+.risk {
+  color: orange;
+}
+
+.inactive {
+  color: red;
+}

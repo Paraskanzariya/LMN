@@ -1,0 +1,28 @@
+<div class="profile-popup-container" *ngIf="showProfilePopup">
+  <div class="profile-popup">
+    <div class="profile-info">
+      <div class="profile-icon" (click)="closeProfilePopup()" [@pulseAnimation]="animationState">
+        <mat-icon>account_circle</mat-icon>
+      </div>
+      <hr>
+      <div>
+        <div class="profile-info">
+          <h3>Customer Information</h3>
+          <p><strong>Name:</strong> John Doe</p>
+          <p><strong>Email:</strong> johndoe</p>
+          <p><strong>Phone:</strong> +1234567890</p>
+          <p><strong>Address:</strong> 123 Main Street, City, Country</p>
+        </div> <hr>
+        <div class="loan-details">
+          <h3>Loan Details</h3>
+          <p><strong>Loan ID:</strong> ABC123</p>
+          <p><strong>Loan Type:</strong> Personal Loan</p>
+          <p><strong>Loan Amount:</strong> $10,000</p>
+          <p><strong>Loan Status:</strong> Active</p>
+          <button class="close-btn" (click)="closeProfilePopup()">Close</button>
+        </div>
+      </div>
+    </div>
+    <!-- Add more profile details here -->
+  </div>
+</div>

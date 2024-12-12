@@ -1,0 +1,42 @@
+h2 {
+    padding-top: 2%;
+    padding-left: 21%;
+}
+
+.container {
+    padding-top: 9%;
+    display: flex;
+    margin-left: 13%;
+    padding-left: 8%;
+    text-align: center;
+}
+
+.box {
+    padding-top: 1%;
+    width: 140px;
+    /* Set width of each box */
+    height: 100px;
+    /* Set height of each box */
+    margin-right: 30px;
+    /* Add margin between boxes */
+    background-color: #e0f7fa;
+    /* Set background color */
+}
+
+.active {
+    color: rgb(27, 142, 187);
+}
+
+.risk {
+    color: orange;
+}
+
+.inactive {
+    color: red;
+}
+
+.table-container {
+    width: 92%;
+    margin: 3%;
+    padding-left: 18%;
+}

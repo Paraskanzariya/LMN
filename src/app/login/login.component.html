@@ -1,0 +1,27 @@
+<mat-card class="login-form">
+    <form class="container" [formGroup]="form" (ngSubmit)="onSubmit()">
+        <mat-label class="login-label">Login</mat-label>
+        <mat-form-field class="login-full-width">
+            <mat-label>Username or Email</mat-label>
+            <input matInput placeholder="Username or Email" type="text" formControlName="email">
+        </mat-form-field>
+        <small *ngIf="!form.get('email')?.valid && form.get('email')?.touched" class="form-text"
+            style="color: red;">
+            Please Enter Email
+        </small>
+
+        <mat-form-field class="login-full-width">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" placeholder="password" type="password" formControlName="password">
+        </mat-form-field>
+        <small *ngIf="!form.get('password')?.valid && form.get('password')?.touched" class="form-text"
+            style="color: red;">
+            Please Enter Password
+        </small>
+        <br>
+
+        <button mat-raised-button class="login-button" color="primary">Login</button><br><br>
+        <p>If you don't have Account <a routerLink="/signup">click here to SignUp</a><br>
+        If you forgot password <a routerLink="/forgot-password">click here to Forgot Password</a></p>
+    </form>
+</mat-card>

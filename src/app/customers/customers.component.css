@@ -1,0 +1,70 @@
+h2 {
+    padding-top: 10%;
+    padding-left: 21%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.container {
+    display: flex;
+    /* Use flexbox to arrange items in a row */
+    padding-left: 13.3%;
+    text-align: center;
+}
+
+.search-field {
+    top: -12px;
+    position: relative;
+    width: 100%;
+}
+
+.addNewCustomer {
+    top: -20px;
+    padding-bottom: 1%;
+    position: relative;
+    width: 100%;
+    text-align: right;
+}
+
+.table {
+    cursor: pointer;
+}
+
+.ng-container:hover {
+    background-color: rgb(49, 97, 253);
+}
+
+.addcustomer:hover {
+    background-color: rgb(49, 97, 253);
+}
+
+p {
+    margin-top: 15px;
+}
+
+.search-icon {
+    position: absolute;
+    right: 0;
+    top: calc(50% - 12px);
+    pointer-events: none;
+}
+
+.box {
+    padding-top: 1%;
+    width: 140px;
+    /* Set width of each box */
+    height: 100px;
+    /* Set height of each box */
+    margin-right: 30px;
+    /* Add margin between boxes */
+    background-color: #e0f7fa;
+    /* Set background color */
+}
+
+.table-container {
+    padding-right: 01%;
+    margin: 3%;
+    padding-left: 17.4%;
+}

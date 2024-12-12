@@ -1,0 +1,107 @@
+/* Navbar Styles */
+.navbar {
+    background-color: #e3f2fd;
+    font-weight: bold;
+    position: fixed;
+    width: 100%;
+}
+
+/* Navbar Toggler Styles */
+.navbar-toggler {
+    border: none;
+    margin: 10px;
+}
+
+.navbar-toggler-icon {
+    color: #333;
+    /* Toggler icon color */
+}
+
+/* Navbar Brand Styles */
+.navbar-brand {
+    color: #333;
+    /* Adjust text color */
+}
+
+/* Profile Button Styles */
+.btn-profile {
+    color: #333;
+    /* Text color */
+    background-color: transparent;
+    /* Transparent background */
+    border: none;
+    /* Remove border */
+    transition: color 0.3s ease;
+    /* Smooth transition for color */
+}
+
+.btn-profile:hover {
+    color: #000;
+    /* Change text color on hover */
+}
+
+/* Icon Styles */
+.btn-profile i {
+    margin-right: 5px;
+    /* Adjust icon spacing */
+}
+
+/* Navbar Toggler Styles */
+.navbar-toggler {
+    border: none;
+    display: block;
+    margin: 10px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transition for background color and box shadow */
+}
+
+.navbar-toggler:hover {
+    background-color: #f0f0f0;
+    /* Change background color on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    /* Add box shadow effect on hover */
+}
+
+
+/* Animation for Navbar Collapse */
+.navbar-collapse {
+    animation: slideInFromTop 0.5s ease;
+    /* Add animation to navbar collapse */
+}
+
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+
+/* Animation for Navbar Collapse */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        animation: slideInFromTop 0.5s ease;
+    }
+}
+
+/* Profile Button Styles */
+.btn-profile {
+    color: #333;
+    /* Text color */
+    background-color: transparent;
+    /* Transparent background */
+    border: none;
+    /* Remove border */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    /* Smooth transition for background color and box shadow */
+}
+
+.btn-profile:hover {
+    background-color: #f0f0f0;
+    /* Change background color on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    /* Add box shadow effect on hover */
+}

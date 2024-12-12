@@ -1,0 +1,26 @@
+.admin-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .admin-menu ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .admin-menu ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  .admin-menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .admin-menu ul li a:hover {
+    color: #007bff;
+  }
+  

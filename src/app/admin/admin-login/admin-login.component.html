@@ -1,0 +1,27 @@
+<mat-card class="admin-panel">
+    <form class="container" [formGroup]="adminForm" (ngSubmit)="onSubmit()">
+        <mat-label class="admin-label">Admin Login</mat-label>
+
+        <mat-form-field class="admin-full-width">
+            <mat-label>Username</mat-label>
+            <input matInput placeholder="Username" type="text" formControlName="username">
+        </mat-form-field>
+        <small *ngIf="!adminForm.get('username')?.valid && adminForm.get('username')?.touched" class="form-text"
+            style="color: red;">
+            Please enter a valid username
+        </small>
+
+        <mat-form-field class="admin-full-width">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" placeholder="Password" type="password" formControlName="password">
+        </mat-form-field>
+        <small *ngIf="!adminForm.get('password')?.valid && adminForm.get('password')?.touched" class="form-text"
+            style="color: red;">
+            Please enter a valid password
+        </small>
+        <br>
+
+        <button mat-raised-button class="admin-button" color="primary">Login</button><br><br>
+        <p>If you are not an admin, please <a routerLink="/login">Login as a user</a>
+    </form>
+</mat-card>

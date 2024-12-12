@@ -1,0 +1,53 @@
+<mat-card class="signup-form">
+    <form class="container" [formGroup]="Form" (ngSubmit)="onSubmit()">
+        <mat-label class="signup-label">SignUp</mat-label>
+        <mat-form-field class="signup-full-width">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Email or Username" type="text" formControlName="email">
+        </mat-form-field>
+        <small *ngIf="!Form.get('email')?.valid && Form.get('email')?.touched" class="form-text"
+            style="color: red;">
+            Please Enter Email
+        </small>
+
+        <mat-form-field class="signup-full-width">
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="Name" type="text" formControlName="name">
+        </mat-form-field>
+        <small *ngIf="!Form.get('name')?.valid && Form.get('name')?.touched" class="form-text"
+            style="color: red;">
+            Please Enter Name
+        </small>
+
+        <mat-form-field class="signup-full-width">
+            <mat-label>Contact No.</mat-label>
+            <input matInput placeholder="Contact NO." type="number" formControlName="contact">
+        </mat-form-field>
+        <small *ngIf="!Form.get('contact')?.valid && Form.get('contact')?.touched" class="form-text"
+            style="color: red;">
+            Please Enter Contact
+        </small>
+
+        <mat-form-field class="signup-full-width">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" placeholder="password" type="password" formControlName="password">
+        </mat-form-field>
+        <small *ngIf="!Form.get('password')?.valid && Form.get('password')?.touched" class="form-text"
+            style="color: red;">
+            Please Enter Password
+        </small>
+
+        <mat-form-field class="signup-full-width">
+            <mat-label>Confirm Password</mat-label>
+            <input matInput type="password" placeholder="Confirm password" type="password" formControlName="cpassword">
+        </mat-form-field>
+        <small *ngIf="!Form.get('cpassword')?.valid && Form.get('cpassword')?.touched" class="form-text"
+            style="color: red;">
+            Please Enter Confirm Password
+        </small>
+
+        <button mat-raised-button class="signup-button" color="primary">signup</button><br><br>
+        <p>If you already have Account <a routerLink="/login">click here to Login</a>
+        <p>
+    </form>
+</mat-card>

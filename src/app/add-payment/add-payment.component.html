@@ -1,0 +1,15 @@
+<div class="add-payment-form">
+    <h3>Add New Payment</h3>
+    <form #paymentForm="ngForm" (ngSubmit)="submitPayment(paymentForm)">
+        <mat-form-field>
+            <input matInput placeholder="Customer Name" name="customerName" ngModel required>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="number" placeholder="Amount" name="amount" ngModel required>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="date" placeholder="Payment Date" name="paymentDate" ngModel required>
+        </mat-form-field>
+        <button mat-raised-button color="primary" type="submit">Submit</button>
+    </form>
+</div>

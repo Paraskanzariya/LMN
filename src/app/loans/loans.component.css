@@ -1,0 +1,60 @@
+h2 {
+    padding-top: 9%;
+    padding-left: 21%;
+}
+
+.search-field {
+    position: relative;
+    width: 100%;
+}
+
+.search-icon {
+    position: absolute;
+    right: 0;
+    top: calc(50% - 12px);
+    pointer-events: none;
+}
+
+.active {
+    color: rgb(27, 142, 187);
+}
+
+.risk {
+    color: orange;
+}
+
+.inactive {
+    color: red;
+}
+
+
+.mat-form-field-wrapper {
+    padding-left: 24px;
+}
+
+
+.container {
+    padding-top: 9%;
+    display: flex;
+    /* Use flexbox to arrange items in a row */
+    padding-left: 13.3%;
+    text-align: center;
+}
+
+.box {
+    padding-top: 1%;
+    width: 140px;
+    /* Set width of each box */
+    height: 100px;
+    /* Set height of each box */
+    margin-right: 30px;
+    /* Add margin between boxes */
+    background-color: #e0f7fa;
+    /* Set background color */
+}
+
+.table-container {
+    width: 92%;
+    margin: 3%;
+    padding-left: 18%;
+}

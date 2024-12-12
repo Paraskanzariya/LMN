@@ -1,0 +1,19 @@
+<div class="add-invoice-form">
+    <h3>Add New Invoice</h3>
+    <form #invoiceForm="ngForm" (ngSubmit)="addInvoice(invoiceForm)">
+        <mat-form-field>
+            <input matInput placeholder="Customer Name" name="customerName" ngModel required>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="number" placeholder="Amount" name="amount" ngModel required>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput type="date" placeholder="Due Date" name="dueDate" ngModel required>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Status" name="status" ngModel required>
+        </mat-form-field>
+        <button mat-raised-button class="submitbtd" color="primary" type="submit">Submit</button>
+        <button mat-raised-button class="cancelbtn" color="warn" type="button" (click)="cancelAddInvoice()">Cancel</button>
+    </form>
+</div>

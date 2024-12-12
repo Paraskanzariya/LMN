@@ -1,0 +1,72 @@
+<h2>Invoices</h2>
+
+<!-- Search and Add New Invoice -->
+<div class="toolbar">
+    <!-- <mat-form-field class="search-field">
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search Invoices">
+        <button mat-icon-button matSuffix>
+            <mat-icon>search</mat-icon>
+        </button>
+    </mat-form-field> -->
+
+    <button mat-raised-button class="invoiceButton" color="primary" (click)="addInvoice()">
+        <mat-icon>add</mat-icon>
+        <span>Add New Invoice</span>
+    </button>
+</div>
+
+<div class="table">
+    <!-- Table to display invoices -->
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <!-- Invoice ID Column -->
+        <ng-container matColumnDef="invoiceId">
+            <th mat-header-cell *matHeaderCellDef> Invoice ID </th>
+            <td mat-cell *matCellDef="let invoice"> {{ invoice.invoiceId }} </td>
+        </ng-container>
+
+        <!-- Customer Name Column -->
+        <ng-container matColumnDef="customerName">
+            <th mat-header-cell *matHeaderCellDef> Customer Name </th>
+            <td mat-cell *matCellDef="let invoice"> {{ invoice.customerName }} </td>
+        </ng-container>
+
+        <!-- Amount Column -->
+        <ng-container matColumnDef="amount">
+            <th mat-header-cell *matHeaderCellDef> Amount </th>
+            <td mat-cell *matCellDef="let invoice"> {{ invoice.amount | currency:'USD':'symbol':'1.2-2' }} </td>
+        </ng-container>
+
+        <!-- Due Date Column -->
+        <ng-container matColumnDef="dueDate">
+            <th mat-header-cell *matHeaderCellDef> Due Date </th>
+            <td mat-cell *matCellDef="let invoice"> {{ invoice.dueDate | date }} </td>
+        </ng-container>
+
+        <!-- Status Column -->
+        <ng-container matColumnDef="status">
+            <th mat-header-cell *matHeaderCellDef> Status </th>
+            <td mat-cell *matCellDef="let invoice"> {{ invoice.status }} </td>
+        </ng-container>
+
+
+        <!-- Add more columns as needed -->
+
+        <ng-container matColumnDef="delete">
+            <th mat-header-cell *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let invoice">
+                <button mat-icon-button color="warn" (click)="deleteInvoice(invoice)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </td>
+        </ng-container>
+
+        <!-- Set column headers -->
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+
+        <!-- Set rows -->
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>
+
+<!-- Paginator for pagination -->
+<mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" showFirstLastButtons></mat-paginator>
